@@ -2,7 +2,7 @@
 # lawstar-dsh-mcp 一键安装脚本（DeepSeek Harness）
 # 用法：
 #   本地：  bash install.sh
-#   远端：  bash <(curl -fsSL https://raw.githubusercontent.com/<your-org>/lawstar-dsh-mcp/main/install.sh)
+#   远端：  bash <(curl -fsSL https://raw.githubusercontent.com/law-star-cn/lawstar-dsh-mcp/main/install.sh)
 # 支持：优先 dsh CLI（自动注册 bundle）；无 dsh 时回退 pnpm 并兜底注册 bundles。
 # 幂等：重复执行不会重复注册或破坏已有配置。
 set -euo pipefail
@@ -57,4 +57,4 @@ fi
 echo
 echo "✅ 安装完成！最后一步：重启 DeepSeek Harness（停止后重新运行 dsh web）。"
 echo "   重启后在对话中输入「连接法律之星 MCP」并提供 API Key 即可接入法律之星法规数据能力。"
-echo "   详见：https://github.com/<your-org>/lawstar-dsh-mcp"
+echo "   详见：https://github.com/law-star-cn/lawstar-dsh-mcp"

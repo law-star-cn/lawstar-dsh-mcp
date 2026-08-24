@@ -42,9 +42,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<your-org>/lawstar-dsh-mcp.git"
+    "url": "git+https://github.com/law-star-cn/lawstar-dsh-mcp.git"
   },
-  "homepage": "https://github.com/<your-org>/lawstar-dsh-mcp#readme",
+  "homepage": "https://github.com/law-star-cn/lawstar-dsh-mcp#readme",
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"

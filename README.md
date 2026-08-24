@@ -24,14 +24,14 @@ DeepSeek Harness 插件：一键把**法律之星（LawStar）法规数据 MCP**
 把下面的链接直接发给你的 DeepSeek Harness 对话，说「帮我安装这个插件」即可。
 
 ```
-帮我安装这个插件 https://github.com/<your-org>/lawstar-dsh-mcp
+帮我安装这个插件 https://github.com/law-star-cn/lawstar-dsh-mcp
 ```
 
 Agent 会按本 README 执行（你也可以自己跑）：
 
 ```
 # 方式一：一键脚本（自动安装 + 注册 bundle + 提示重启）
-bash <(curl -fsSL https://raw.githubusercontent.com/<your-org>/lawstar-dsh-mcp/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/law-star-cn/lawstar-dsh-mcp/main/install.sh)
 # 方式二：手动两步
 dsh plugin --profile web add lawstar-dsh-mcp
 # 重启 dsh web
@@ -51,14 +51,14 @@ dsh plugin --profile web add lawstar-dsh-mcp
 ### 方式 B：GitHub 直装
 
 ```
-dsh plugin --profile web add github:<your-org>/lawstar-dsh-mcp
+dsh plugin --profile web add github:law-star-cn/lawstar-dsh-mcp
 # 再重启 dsh web
 ```
 
 ### 方式 C：源码 / 本地调试
 
 ```
-git clone https://github.com/<your-org>/lawstar-dsh-mcp.git
+git clone https://github.com/law-star-cn/lawstar-dsh-mcp.git
 cd lawstar-dsh-mcp
 dsh plugin --profile web add "link:$(pwd)"      # 或 pnpm add "file:$(pwd)" # 再重启 dsh web
 ```
