@@ -18,7 +18,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install & lint & test
         run: |
-          npm ci --ignore-scripts --legacy-peer-deps
+          npm install --ignore-scripts --legacy-peer-deps
           npm run lint
           npm test
           npm run verify-pack
@@ -35,7 +35,7 @@ jobs:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
       - name: Install
-        run: npm ci --ignore-scripts --legacy-peer-deps
+        run: npm install --ignore-scripts --legacy-peer-deps
       - name: Publish to npm
         run: npm publish --access public
         env:
