@@ -5,7 +5,7 @@
 # 的 cordis.yml 该插件行 config 下直接填写 apiKey。
 - insert:
     - id: lawstar-mcp
-      name: 'lawstar-dsh-mcp'
+      name: '@law-star-cn/lawstar-dsh-mcp'
       config:
         apiKey: ''
         autoConnectOnActivate: false

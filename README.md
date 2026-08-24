@@ -33,7 +33,7 @@ Agent 会按本 README 执行（你也可以自己跑）：
 # 方式一：一键脚本（自动安装 + 注册 bundle + 提示重启）
 bash <(curl -fsSL https://raw.githubusercontent.com/law-star-cn/lawstar-dsh-mcp/main/install.sh)
 # 方式二：手动两步
-dsh plugin --profile web add lawstar-dsh-mcp
+dsh plugin --profile web add @law-star-cn/lawstar-dsh-mcp
 # 重启 dsh web
 ```
 
@@ -42,11 +42,11 @@ dsh plugin --profile web add lawstar-dsh-mcp
 ### 方式 A：npm 安装
 
 ```
-dsh plugin --profile web add lawstar-dsh-mcp
+dsh plugin --profile web add @law-star-cn/lawstar-dsh-mcp
 # 重启 dsh web
 ```
 
-若未自动注册，手动在 `~/.dsh/profiles/web/package.json` 的 `dsh.profile.bundles` 追加 `"lawstar-dsh-mcp"`，再重启。
+若未自动注册，手动在 `~/.dsh/profiles/web/package.json` 的 `dsh.profile.bundles` 追加 `"@law-star-cn/lawstar-dsh-mcp"`，再重启。
 
 ### 方式 B：GitHub 直装
 
@@ -75,7 +75,7 @@ dsh plugin --profile web add "link:$(pwd)"      # 或 pnpm add "file:$(pwd)" # �
 | "查一下法律之星 MCP 连接状态" | 触发 `lawstar_status`：显示端点、Key（脱敏）、可用工具 |
 | "断开法律之星 MCP" | 触发 `lawstar_disconnect`：清除本地 Key、停用工具 |
 
-**如何获得 API Key**：登录[法律之星开放平台控制台](https://api.law-star.com) → API Key 管理 → 创建 Key。API Key 采用 Bearer 鉴权，按积分计费，单日有调用频次限制。
+**如何获得 API Key**：登录[法律之星开放平台](https://open.law-star.com)，进入「控制台 → API Key 管理」创建 Key。API Key 采用 Bearer 鉴权，按积分计费，单日有调用频次限制。
 
 连接成功后，以下工具直接可用（示例）：
 
@@ -92,7 +92,7 @@ dsh plugin --profile web add "link:$(pwd)"      # 或 pnpm add "file:$(pwd)" # �
 
 ```
 - id: lawstar-mcp
-  name: 'lawstar-dsh-mcp'
+  name: '@law-star-cn/lawstar-dsh-mcp'
   config:
     endpoint: 'https://api.law-star.com/mcp/point'  # MCP 网关端点
     serverName: 'lawstar'                            # MCP 服务器名（工具前缀 mcp__lawstar__*）
@@ -110,10 +110,6 @@ npm run verify-pack              # npm pack 白名单校验，防止 dev/test �
 ```
 
 > `@deepseek-ai/*` 是对等依赖，仅在 DeepSeek Harness 运行环境（web profile）中提供，不在公共注册表发布；因此本地与 CI 用 `--legacy-peer-deps` 安装，仅运行不依赖宿主的纯逻辑单测。存储域 / loader / tools 的集成需在 Harness 环境验证。
-
-## 发布 / Publish
-
-完整上架流程（GitHub 建仓、npm 发布、打 `dsh-plugin` topic 进市场、CI 发布）见 [PUBLISH.md](./PUBLISH.md)。
 
 ## 安全说明 / Security
 

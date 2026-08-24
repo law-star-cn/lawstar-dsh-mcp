@@ -1,5 +1,5 @@
 {
-  "name": "lawstar-dsh-mcp",
+  "name": "@law-star-cn/lawstar-dsh-mcp",
   "version": "1.0.0",
   "description": "DeepSeek Harness 插件：一键 API Key 接入法律之星 MCP（语义检索/法条调取/法规列表/批量识别/幻觉校验/批量引用） / One-click API Key connect to LawStar legal-data MCP for DeepSeek Harness",
   "type": "module",

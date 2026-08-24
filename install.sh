@@ -6,7 +6,7 @@
 # 支持：优先 dsh CLI（自动注册 bundle）；无 dsh 时回退 pnpm 并兜底注册 bundles。
 # 幂等：重复执行不会重复注册或破坏已有配置。
 set -euo pipefail
-PKG="lawstar-dsh-mcp"
+PKG="@law-star-cn/lawstar-dsh-mcp"
 DSH_HOME="${DSH_HOME:-$HOME/.dsh}"
 PROFILE="${DSH_PROFILE:-web}"
 PROFILE_DIR="$DSH_HOME/profiles/$PROFILE"

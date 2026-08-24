@@ -2,7 +2,7 @@
 
 ## [1.0.0] - 2026-08-24
 
-- **feat**: 法律之星 MCP API Key 插件首发（单端点 Streamable HTTP + 静态 Bearer Key）
+- **feat**: 法律之星 MCP API Key 插件首发（单端点 Streamable HTTP + 静态 Bearer Key，npm 包 `@law-star-cn/lawstar-dsh-mcp`）
 - 对话工具：`lawstar_connect` / `lawstar_status` / `lawstar_disconnect`
 - 受管 MCP 服务器：`mcp-lawstar`（serverName=`lawstar`），覆盖 6 大工具：
   `law_semantic_search`、`law_semantic_clause`、`law_statute_list`、
