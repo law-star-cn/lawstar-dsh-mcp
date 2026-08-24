@@ -1,0 +1,12 @@
+# 法律之星 MCP API Key 插件（DSH Bundle patch）
+# 作为 bundle 被合入 profile 时，自动插入本插件行。
+# 插件负责管理 API Key、持久化到存储域，并动态配置 mcp-lawstar 条目。
+# 提示：此文件中不含真实 Key，用户应在对话中连接时提供，或在 profile
+# 的 cordis.yml 该插件行 config 下直接填写 apiKey。
+- insert:
+    - id: lawstar-mcp
+      name: 'lawstar-dsh-mcp'
+      config:
+        apiKey: ''
+        autoConnectOnActivate: false
+        persistTokens: true
