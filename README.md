@@ -79,6 +79,8 @@ dsh plugin --profile web add "link:$(pwd)"      # 或 pnpm add "file:$(pwd)" # �
 
 连接成功后，以下工具直接可用（示例）：
 
+> 提示：MCP 工具在连接成功后会有**数秒异步挂载延迟**。`lawstar_connect` 会轮询等待工具就绪，超时（默认 10s）也会明确提示"正在后台挂载"而非谎报可用；可用 `lawstar_status` 随时确认工具是否在线。
+
 - `mcp__lawstar__law_semantic_search` —— 语义检索相关法条，例如"受贿罪量刑"
 - `mcp__lawstar__law_semantic_clause` —— 按法律名称+条号调取法条原文
 - `mcp__lawstar__law_statute_list` —— 按关键词查询法规列表（可拆地域/部门）
