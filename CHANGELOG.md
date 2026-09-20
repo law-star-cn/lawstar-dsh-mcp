@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.2] - 2026-09-20
+
+- **chore**: peer 依赖对齐 DSH 0.1.5（`@deepseek-ai/cordis@^4.0.2` 取代 `cordis`；`@deepseek-ai/dsh-mcp-client@^0.1.5-rc.2`）。运行时代码无改动，向后兼容
+
 ## [1.0.1] - 2026-08-24
 
 - **fix**: `lawstar_connect` 不再谎报"已连接即可用"——配置后轮询等待 mcp-client 工具就绪（默认 10s，可配 `onlineWaitMs`），超时明确提示"正在后台挂载"
