@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.0] - 2026-10-27
+
+- **适配 DSH 0.2.1-rc.2**：peer 依赖升级到 `@deepseek-ai/dsh-mcp-client@0.2.1-rc.2`、`dsh-storage-domain@0.2.1-rc.2`、`schemastery@~3.18.5`、`cordis@~4.0.5`
+- **fix**: 法律之星只支持 2025 版 MCP `initialize`，DSH 0.2.x 会先发 `server/discover`；新增 fetch 层 404 兼容探测，避免服务器始终 disconnected
+- **fix**: `lawstar_connect()` 无参数时复用已持久化的 Key；不再被默认空 `config.apiKey` 拦住
+- **fix**: 存储域改为 `domain.table('credentials')`，兼容 0.2.x；旧 `domain.tables.get` 保留回退
+- **fix**: mcp-client 条目改为完整配置覆盖，不再读取旧 `entry.options.config`
+- **feat**: 工具清单补充 `law_point_balance`，当前共 7 个
+- **docs**: README 改为 desktop/web 双 profile 安装说明，增加 0.2.x 兼容说明与集成验证结果
+
 ## [1.0.2] - 2026-09-20
 
 - **chore**: peer 依赖对齐 DSH 0.1.5（`@deepseek-ai/cordis@^4.0.2` 取代 `cordis`；`@deepseek-ai/dsh-mcp-client@^0.1.5-rc.2`）。运行时代码无改动，向后兼容

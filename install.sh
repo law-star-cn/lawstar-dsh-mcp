@@ -8,13 +8,14 @@
 set -euo pipefail
 PKG="@law-star-cn/lawstar-dsh-mcp"
 DSH_HOME="${DSH_HOME:-$HOME/.dsh}"
-PROFILE="${DSH_PROFILE:-web}"
+# Desktop app uses the "desktop" profile; CLI web users can override DSH_PROFILE=web.
+PROFILE="${DSH_PROFILE:-desktop}"
 PROFILE_DIR="$DSH_HOME/profiles/$PROFILE"
 PJ="$PROFILE_DIR/package.json"
 echo "==> 目标 profile: $PROFILE_DIR"
 if [ ! -d "$PROFILE_DIR" ]; then
   echo "错误：profile 不存在：$PROFILE_DIR"
-  echo "请确认 DSH_HOME 与 DSH_PROFILE（默认 ~/.dsh 与 web）。"
+  echo "请确认 DSH_HOME 与 DSH_PROFILE（默认 ~/.dsh 与 desktop；web 用户用 DSH_PROFILE=web）。"
   exit 1
 fi
 # ── 1) 安装依赖 ──
@@ -55,6 +56,6 @@ else
   echo "警告：未找到 $PJ，请确认 profile 完整。"
 fi
 echo
-echo "✅ 安装完成！最后一步：重启 DeepSeek Harness（停止后重新运行 dsh web）。"
+echo "✅ 安装完成！最后一步：重启 DeepSeek Harness（桌面端重启应用；CLI 重新运行 dsh web）。"
 echo "   重启后在对话中输入「连接法律之星 MCP」并提供 API Key 即可接入法律之星法规数据能力。"
 echo "   详见：https://github.com/law-star-cn/lawstar-dsh-mcp"

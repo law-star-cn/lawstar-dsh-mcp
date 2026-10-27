@@ -1,6 +1,6 @@
 {
   "name": "@law-star-cn/lawstar-dsh-mcp",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "DeepSeek Harness 插件：一键 API Key 接入法律之星 MCP（语义检索/法条调取/法规列表/批量识别/幻觉校验/批量引用） / One-click API Key connect to LawStar legal-data MCP for DeepSeek Harness",
   "type": "module",
   "main": "lib/index.js",
@@ -51,16 +51,17 @@
     }
   },
   "peerDependencies": {
-    "@deepseek-ai/dsh-mcp-client": "^0.1.5-rc.2",
-    "@deepseek-ai/dsh-storage-domain": "^0.2.0",
-    "@deepseek-ai/schemastery": "^3.18.1",
-    "@deepseek-ai/cordis": "^4.0.2",
-    "zod": "^4.4.0"
+    "@deepseek-ai/dsh-mcp-client": "0.2.1-rc.2",
+    "@deepseek-ai/dsh-storage-domain": "0.2.1-rc.2",
+    "@deepseek-ai/schemastery": "~3.18.5",
+    "@deepseek-ai/cordis": "~4.0.5",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "zod": "^4.4.0"
+    "zod": "^4.4.3"
   },
   "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.2.2",
     "node": ">=20"
   }
 }

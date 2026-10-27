@@ -14,6 +14,10 @@ yarn-error.log*
 .env*
 !.env.example
 
+# 本地临时凭据（发布时手工写入，绝不入库）
+.github-token.tmp
+*.token.tmp
+
 # 内部文档（团队上架检查清单，不对外公开）
 PUBLISH.md
 
